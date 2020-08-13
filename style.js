@@ -1,4 +1,9 @@
 // GIVEN a weather dashboard with form inputs
+const api = {
+    key: "cd8fe02296124516441d7f6b8a3f4d06",
+    
+}
+
 
 
 
@@ -8,7 +13,12 @@
 
 
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
+var cityName = $(this).data("city");
+var stateName =$(this).data("state");
 
+// API KEY
+https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&
+exclude={part}&appid={YOUR API KEY}
 
 
 
