@@ -1,0 +1,20 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url('https://i.pinimg.com/originals/2e/2d/7f/2e2d7f77cebd92d5adbdc8907dfe2456.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient();
+}
