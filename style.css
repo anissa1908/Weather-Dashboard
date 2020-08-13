@@ -34,4 +34,25 @@ header input {
     outline: none;
     background-color: purple;
     border-radius: 16px 0px 16px 0px;
+    border-bottom: 3px solid;
+
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s ease-out;
+}
+
+main {
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.location.city.date {
+    color: whitesmoke;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    
 }
