@@ -18,3 +18,20 @@ body {
     min-height: 100vh;
     background-image: linear-gradient();
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+
+header input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: purple;
+    border-radius: 16px 0px 16px 0px;
+}
