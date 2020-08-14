@@ -18,10 +18,45 @@ let textResult = document.getElementById("result");
 var cityName = $(this).data("city");
 var stateName =$(this).data("state");
 
-// API KEY
-https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&
-exclude={part}&appid={YOUR API KEY}
 
+//src url for weather icon http://openweathermap.org/img/wn/01d@2x.png
+// API KEY
+//api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
+//https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={YOUR API KEY}
+$("#searchForm").on("submit", function(event){
+    event.preventDefault();
+   var city = $(".search-box").val().trim();
+   var generalURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+   var date = new Date();
+    //do the general api call to get the lat and lon
+    $.ajax({
+        method: "GET",
+        url: generalURL
+    }).then(function(data){
+        console.log(data)
+       
+        var oneCallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}`
+        $.ajax({
+            method: "GET",
+            url:oneCallURL
+        }).then(function(result){ 
+
+        //appending data for current weather
+        $(".Location").append(`<div class="city">${data.name}</div>
+        <div class="date">${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()}`);
+        $(".current").append(`<div class="temperature">Temp - ${((data.main.temp-273.15)*1.8+32).toFixed(1)} &#8457</div>
+        <div class="Weather">Weather - ${data.weather[0].main}</div>
+        <div class="Hi-Low">Temp Range - ${((data.main.temp_min-273.15)*1.8+32).toFixed(1)} - ${((data.main.temp_max-273.15)*1.8+32).toFixed(1)} </div>
+        <div class="UVI">UV Index - ${result.current.uvi}</div>`)
+        
+        
+        console.log(result)
+        })
+    })
+    //do the onecall endpoint to get all the data
+
+    //do some stuff with data
+})
 
 
 // WHEN I view current weather conditions for that city

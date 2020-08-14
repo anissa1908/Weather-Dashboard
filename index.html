@@ -5,24 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://openweathermap.org/api"></script>
 </head>
 <body>
     <div class="app-wrap">
     <header>
-        <input type="text" autocomplete="off" class="search-box"
+        <form action="submit" id="searchForm">
+             <input type="text" autocomplete="off" class="search-box"
         placeholder="Search for a city"/>
+        </form>
     </header>
     <main>
         <section class="Location">
-            <div class="city">Houston, TX</div>
-            <div class="date">August 12, 2020
+            <!-- <div class="city">Houston, TX</div>
+            <div class="date">August 12, 2020 -->
         <section>
          <div class="current">
-            <div class="temperature">90 &#8457</div>
+            <!-- <div class="temperature">90 &#8457</div>
             <div class="Weather">Rain</div>
-            <div class="Hi-Low"></div>
-        
+            <div class="Hi-Low"></div> -->
         </div>
     </main>
 </div> 
