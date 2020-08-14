@@ -5,14 +5,7 @@ let textState = document.getElementById("textState");
 let textResult = document.getElementById("result");
     
 
-
-
-
-
 // WHEN I search for a city
-
-
-
 
 // THEN I am presented with current and future conditions for that city and that city is added to the search history
 var cityName = $(this).data("city");
@@ -49,13 +42,11 @@ $("#searchForm").on("submit", function(event){
         <div class="Hi-Low">Temp Range - ${((data.main.temp_min-273.15)*1.8+32).toFixed(1)} - ${((data.main.temp_max-273.15)*1.8+32).toFixed(1)} </div>
         <div class="UVI">UV Index - ${result.current.uvi}</div>`)
         
-        
-        console.log(result)
         })
     })
-    //do the onecall endpoint to get all the data
+   
 
-    //do some stuff with data
+
 })
 
 
