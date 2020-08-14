@@ -41,6 +41,17 @@ $("#searchForm").on("submit", function(event){
         <div class="Weather">Weather - ${data.weather[0].main}</div>
         <div class="Hi-Low">Temp Range - ${((data.main.temp_min-273.15)*1.8+32).toFixed(1)} - ${((data.main.temp_max-273.15)*1.8+32).toFixed(1)} </div>
         <div class="UVI">UV Index - ${result.current.uvi}</div>`)
+
+        // appending images based on change of weather temperatures
+        if (fTemp >= 100) {
+            $(".container").css("background-image", "url('https://pblog.hertz.com/wp-content/uploads/2017/04/img-lrg-beaches.jpg')");
+        } else if (fTemp <= 70) {
+            $(".container").css("background-image", "url('https://wwmt.com/resources/assets/common/weather-images/News3/85.jpg')");
+        } else if (fTemp <= 50) {
+            $(".container").css("background-image", "url('https://wallpapercave.com/wp/wp4623559.jpg')");
+        }
+
+        $()
         
         })
     })
