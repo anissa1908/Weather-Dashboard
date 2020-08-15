@@ -6,29 +6,37 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://openweathermap.org/api"></script>
 </head>
+
 <body>
-    <div class="app-wrap">
-    <header>
+<div class="app-wrap">
+<div class="row">
+        <header class="col-2">
         <form action="submit" id="searchForm">
              <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city"/>
+             <div id="cityHistory"></div>
         </form>
-    </header>
-    <main>
+    </header> 
+    <main class="col-10">
         <section class="Location">
             <!-- <div class="city">Houston, TX</div>
             <div class="date">August 12, 2020 -->
-        <section>
+            </section>
          <div class="current">
             <!-- <div class="temperature">90 &#8457</div>
             <div class="Weather">Rain</div>
             <div class="Hi-Low"></div> -->
         </div>
-        
+        <div class="row container" style="margin:auto;justify-content: space-evenly;" id='forecast'>
+            
+        </div>
     </main>
+</div>
+   
 </div> 
-<script src="style.js"></script>     
+<script src="style.js"></script>    
 </style>
 </body>
 </html>
