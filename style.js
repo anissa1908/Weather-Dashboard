@@ -1,5 +1,6 @@
 // GIVEN a weather dashboard with form inputs
-const apiKey = "cd8fe02296124516441d7f6b8a3f4d06";
+const apiKey = "24c95342b3798b68ce455f1f35100d22";
+const apiKey2 ="9152f63ce6071ae43103697c66505eec";
 let textCity = document.getElementById("textCity");
 let textState = document.getElementById("textState");
 let textResult = document.getElementById("result");
@@ -26,7 +27,7 @@ $("#searchForm").on("submit", function(event){
         method: "GET",
         url: generalURL
     }).then(function(data){
-        console.log(data)
+        // console.log(data)
        
         var oneCallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}`
         $.ajax({
@@ -42,63 +43,24 @@ $("#searchForm").on("submit", function(event){
         <div class="Hi-Low">Temp Range - ${((data.main.temp_min-273.15)*1.8+32).toFixed(1)} - ${((data.main.temp_max-273.15)*1.8+32).toFixed(1)} </div>
         <div class="UVI">UV Index - ${result.current.uvi}</div>`)
 
-        // appending images based on change of weather temperatures
-        if (fTemp >= 100) {
-            $(".container").css("background-image", "url('https://pblog.hertz.com/wp-content/uploads/2017/04/img-lrg-beaches.jpg')");
-        } else if (fTemp <= 70) {
-            $(".container").css("background-image", "url('https://wwmt.com/resources/assets/common/weather-images/News3/85.jpg')");
-        } else if (fTemp <= 50) {
-            $(".container").css("background-image", "url('https://wallpapercave.com/wp/wp4623559.jpg')");
-        }
 
-        $()
-        
-        })
     })
-   
-
-
 })
+        // conditions based on change of temperature
+        // if (fTemp >= 100) {
+        //     $(".container").css("background-image", "url('https://pblog.hertz.com/wp-content/uploads/2017/04/img-lrg-beaches.jpg')");
+        // } else if (fTemp <= 70) {
+        //     $(".container").css("background-image", "url('https://wwmt.com/resources/assets/common/weather-images/News3/85.jpg')");
+        // } else if (fTemp <= 50) {
+        //     $(".container").css("background-image", "url('https://wallpapercave.com/wp/wp4623559.jpg')");
+        // }
+  
+// //    Second API used to pull 7 day forecast
+//     $("#searchForm").on("submit", function(event){
+//         event.preventDefault();
+//        var city = $(".search-box").val().trim();
+//        var secondURL = `http://api.weatherstack.com/${apiKey2}`;
+//        var date = new Date();
 
 
-// WHEN I view current weather conditions for that city
-
-
-
-
-
-// THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-
-
-
-
-
-// WHEN I view the UV index
-
-
-
-
-// THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-
-
-
-// WHEN I view future weather conditions for that city
-
-
-// THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-
-
-// WHEN I click on a city in the search history
-
-
-
-// THEN I am again presented with current and future conditions for that city
-
-
-
-
-// WHEN I open the weather dashboard
-
-
-// THEN I am presented with the last searched city forecast
 
