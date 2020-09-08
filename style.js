@@ -27,7 +27,7 @@ appendBtns()
 $("#searchForm").on("submit", function(event){
     event.preventDefault();
    var city = $(".search-box").val().trim();
-   var generalURL = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+   var generalURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
    var date = new Date();
 
     //do the general api call to get the lat and lon
@@ -43,7 +43,7 @@ $("#searchForm").on("submit", function(event){
         }
         appendBtns()
        
-        var oneCallURL = `http://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}`
+        var oneCallURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=${apiKey}`
         $.ajax({
             method: "GET",
             url:oneCallURL
