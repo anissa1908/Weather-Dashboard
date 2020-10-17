@@ -1,11 +1,25 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Dashboard
 
-I built a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS. API calls were also used to retrieve weather data for cities pulled by the user. Local storage was also used to store user inputs.
+## Concept
+This server side web application runs in the browser and features dynamically updated HTML and CSS. API calls were used to retrieve weather data for citites input by the user and returned a 5 day weather forecast. Local Storage was also used to store user inputs.
+06 Server-Side APIs: Weather Dashboard
 
-Source: [OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. 
+## Source
 
-## User Story
-As a traveler, I want to see the weather outlook for multiple cities so that I can plan a trip accordingly.
+[OpenWeather API](https://openweathermap.org/api) to retrieve weather data for cities. 
+
+## Usage
+
+The user is able to see a 5 day weather forecast for the city they input into the app so they can plan accordingly.
+
+# Technologies Used
+HTML, CSS, JavaScript, Open Weather API, Local Storage
+
+Image of Deployed App
+
+![] <img src="Houston.png">
+
+
 
 
 See "Weather Dashboard Final.png" in "Open Editors" for image of page.
