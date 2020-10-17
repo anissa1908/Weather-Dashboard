@@ -12,7 +12,7 @@ This server side web application runs in the browser and features dynamically up
 
 The user is able to see a 5 day weather forecast for the city they input into the app so they can plan accordingly.
 
-# Technologies Used
+## Technologies Used
 HTML, CSS, JavaScript, Open Weather API, Local Storage
 
 ## Image of Deployed App
