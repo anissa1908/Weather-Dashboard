@@ -15,11 +15,12 @@ The user is able to see a 5 day weather forecast for the city they input into th
 # Technologies Used
 HTML, CSS, JavaScript, Open Weather API, Local Storage
 
-Image of Deployed App
+## Image of Deployed App
 
-![] <img src="Houston.png">
+<img src="Houston.png">
+
+## Deployed App Link
+
+https://anissa1908.github.io/Weather-Dashboard/
 
 
-
-
-See "Weather Dashboard Final.png" in "Open Editors" for image of page.
