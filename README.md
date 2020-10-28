@@ -1,7 +1,7 @@
 # Weather Dashboard
 
 ## Concept
-This server side web application runs in the browser and features dynamically updated HTML and CSS. API calls were used to retrieve weather data for cities input by the user and returned a 5 day weather forecast. Local Storage was also used to store user inputs.
+This server side web application runs in the browser and features dynamically updated HTML and CSS. API calls are used to retrieve weather data for cities input by the user and returns a 5 day weather forecast. Local Storage is also used to store user inputs.
 
 ## Source
 
@@ -9,7 +9,7 @@ This server side web application runs in the browser and features dynamically up
 
 ## Usage
 
-The user is able to see a 5 day weather forecast for the city they input into the app so they can plan accordingly.
+The user is able to see a 5 day weather forecast for the city they input into the app so they can plan their trip accordingly.
 
 ## Technologies Used
 HTML, CSS, JavaScript, Open Weather API, Local Storage
