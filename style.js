@@ -1,5 +1,5 @@
 // GIVEN a weather dashboard with form inputs
-const apiKey = "bbfef8af1c490170a637f66f1027b48f";
+const apiKey = "cd307aa21ba08154556a15294491ff34";
 let textCity = document.getElementById("textCity");
 let textState = document.getElementById("textState");
 let textResult = document.getElementById("result");
